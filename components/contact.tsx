@@ -1,11 +1,11 @@
-"use client"
+"use client";
 import React from "react";
 import SectionHeading from "./section-heading";
-import { FaPaperPlane } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { useSectionInview } from "@/app/lib/hooks";
 import { sendEmail } from "@/actions/sendEmail";
 import SubmitBtn from "./submit-btn";
+import toast from "react-hot-toast";
 
 export default function Contact() {
   const ref = useSectionInview("Contact", 1);
@@ -14,10 +14,10 @@ export default function Contact() {
       ref={ref}
       id="contact"
       className="scroll-mt-32 mb-28 w-[min(100%, 38rem)] text-center"
-    initial={{opacity: 0}}
-    whileInView={{opacity: 1}}
-    transition={{duration: 1}}
-    viewport={{once: true}}
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+      viewport={{ once: true }}
     >
       <SectionHeading>Contact Me</SectionHeading>
       <p className="text-gray-700 -mt-3">
@@ -27,11 +27,17 @@ export default function Contact() {
         </a>{" "}
         or through this form.
       </p>
-      <form className="flex flex-col mt-10"
-      action={async (formData) => {
-        
-        await sendEmail(formData);
-      }}>
+      <form
+        className="flex flex-col mt-10"
+        action={async (formData) => {
+          const { data, error } = await sendEmail(formData);
+          if (error) {
+            toast.error(error);
+            return;
+          }
+          toast.success("Email sent successfully!")
+        }}
+      >
         <input
           type="email"
           name="senderEmail"
@@ -40,13 +46,14 @@ export default function Contact() {
           required
           maxLength={500}
         />
-        <textarea className="h-40 my-3 p-4 rounded-lg border border-black/10" 
+        <textarea
+          className="h-40 my-3 p-4 rounded-lg border border-black/10"
           placeholder="Your message"
           name="message"
           required
-          maxLength={5000} />
+          maxLength={5000}
+        />
         <SubmitBtn></SubmitBtn>
-        
       </form>
     </motion.section>
   );
