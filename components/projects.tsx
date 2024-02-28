@@ -10,7 +10,7 @@ export default function Projects() {
   const ref = useSectionInview("Projects", 0.4);
 
   return (
-    <motion.section ref={ref} id="projects" className='scroll-mt-28 mb-24'
+    <motion.section ref={ref} id="projects" className='scroll-mt-32 mb-28'
     initial={{opacity:0, y:100}}
     animate={{opacity:1, y:0}}
     transition={{delay: 0.175}}>

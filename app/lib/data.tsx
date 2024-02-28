@@ -1,7 +1,7 @@
 import React from "react";
-//import { CgWorkAlt } from "react-icons/cg";
-//import { FaReact } from "react-icons/fa";
-//import { LuGraduationCap } from "react-icons/lu";
+import { PiNotebookThin } from "react-icons/pi";
+import { FaReact } from "react-icons/fa";
+import { LuGraduationCap } from "react-icons/lu";
 import ecommerceImg from "@/public/ecommerce-website.png";
 import sportWebsiteImg from "@/public/sport-website.png";
 import dailyPlannerImg from "@/public/daily-planner.png";
@@ -33,32 +33,32 @@ export const links = [
   },
 ] as const;
 
-// export const experiencesData = [
-//   {
-//     title: "Graduated bootcamp",
-//     location: "Miami, FL",
-//     description:
-//       "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
-//     icon: React.createElement(LuGraduationCap),
-//     date: "2019",
-//   },
-//   {
-//     title: "Front-End Developer",
-//     location: "Orlando, FL",
-//     description:
-//       "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
-//     icon: React.createElement(CgWorkAlt),
-//     date: "2019 - 2021",
-//   },
-//   {
-//     title: "Full-Stack Developer",
-//     location: "Houston, TX",
-//     description:
-//       "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
-//     icon: React.createElement(FaReact),
-//     date: "2021 - present",
-//   },
-// ] as const;
+export const experiencesData = [
+  {
+    title: "Web Developer",
+    location: "Remote, CA",
+    description:
+      "I work as a Web developer for a non-profit sports association. My stack includes React, Next.js, TypeScript, Tailwind.",
+    icon: React.createElement(FaReact),
+    date: "2023 - present",
+  },
+  {
+    title: "Master's degree",
+    location: "San Francisco, CA",
+    description:
+      "I graduated from the University of San Francisco with a Master's degree in Computer Science in December 2023.",
+    icon: React.createElement(LuGraduationCap),
+    date: "2021 - 2023",
+  },
+  {
+    title: "Undergraduate Credit Transfer",
+    location: "Pleasant Hill, CA",
+    description:
+      "I attended the Diablo Valley college to study computer science and transferred the earned units to apply for a master's program.",
+    icon: React.createElement(PiNotebookThin),
+    date: "2019 - 2020",
+  },
+] as const;
 
 export const projectsData = [
   {
