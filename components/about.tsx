@@ -18,7 +18,7 @@ export default function About() {
         After obtaining a degree in{" "}
         <span className="font-medium">Pharmacy</span> in China, I decided to
         pursue my passion for programming. I enrolled in the University of San
-        Francisco's Master's program and learned{" "}
+        Francisco&apos;s Master&apos;s program and learned{" "}
         <span className="font-medium">Computer Science</span>.{" "}
         <span className="italic">My most favorite part of programming</span> is
         the problem-solving process. I <span className="underline">enjoy</span>{" "}

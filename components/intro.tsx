@@ -11,10 +11,14 @@ import { useActiveSectionContext } from "@/context/active-section-context";
 
 const Intro = () => {
   const ref = useSectionInview("Home", 0.5);
-  const {setActiveSection, setTimeOfLastClick} = useActiveSectionContext();
+  const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
   return (
-    <section ref={ref} id="home" className="mb-28 max-w-[46rem] text-center sm:mb-0 scroll-mt-[100rem]">
+    <section
+      ref={ref}
+      id="home"
+      className="mb-28 max-w-[46rem] text-center sm:mb-0 scroll-mt-[100rem]"
+    >
       <div className="flex items-center justify-center">
         <motion.div
           initial={{ opacity: 0, scale: 0 }}
@@ -36,10 +40,10 @@ const Intro = () => {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="font-bold">Hello, I'm Vivian.</span> I'm a new graduate
-        in <span className="font-bold">Computer Science</span> with a Master's
-        degree. I enjoy building <span className="italic">web applications</span> and
-        aspire to become a{" "}
+        <span className="font-bold">Hello, I&apos;m Vivian.</span> I&apos;m a
+        new graduate in <span className="font-bold">Computer Science</span> with
+        a Master&apos;s degree. I enjoy building{" "}
+        <span className="italic">web applications</span> and aspire to become a{" "}
         <span className="underline">Full-Stack Web Developer.</span>
       </motion.p>
       <motion.div
@@ -52,7 +56,10 @@ const Intro = () => {
           href="#contact"
           className="group bg-gray-900 text-white px-6 py-3 flex items-center gap-2 rounded-full
         outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition
-        border border-black/10" onClick={() => {setActiveSection("Contact"), setTimeOfLastClick(Date.now())}}
+        border border-black/10"
+          onClick={() => {
+            setActiveSection("Contact"), setTimeOfLastClick(Date.now());
+          }}
         >
           Contact me here
           <BsArrowRight className="group-hover:translate-x-1 transition" />
